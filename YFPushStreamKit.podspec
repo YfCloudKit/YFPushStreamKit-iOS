@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YFPushStreamKit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "云帆推流器"
 
   s.description  = <<-DESC
@@ -26,12 +26,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/YfCloudKit/YFPushStreamKit-iOS.git", :tag => s.version.to_s }
   s.vendored_frameworks =  "YFPushStreamKit/*.{framework}"
-  s.vendored_libraries = "YFPushStreamKit/Classes/ffmpeg/lib/*.a"
-  s.preserve_paths = ["YFPushStreamKit/Classes/ffmpeg/lib/*.a","YFPushStreamKit/Classes/ffmpeg/include/**/*.{h,c,cpp}"]
   s.ios.deployment_target = '8.0'
   s.frameworks   = 'VideoToolbox','Security','SystemConfiguration','ImageIO','MobileCoreServices','CoreMotion','Accelerate','GLKit','OpenGLES','CoreVideo','CoreMedia','CFNetwork','AudioToolbox','AVFoundation','CoreGraphics','Foundation','UIKit'
-  s.libraries = 'z','c++','bz2','stdc++.6','avcodec','avfilter','avformat','avutil','swresample','swscale'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/YFPushStreamKit/Classes/ffmpeg/include"','LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/YFPushStreamKit/Classes/ffmpeg/lib"' }
+  s.libraries = 'z','c++','bz2','stdc++.6'
   s.requires_arc = false
 
 end
