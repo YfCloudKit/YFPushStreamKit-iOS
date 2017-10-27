@@ -191,9 +191,10 @@ typedef NS_ENUM(int,YfTransportStyle){
  * isOnlyAudioPushBuffer: 是否纯音频推流  默认0
  * audioRecoderError :音频录音出错回调
  * isOpenAdapta 开启/关闭 自适应码率
+ * enableHEVC 是否开启H265推流（开启后底层自动判断iphone7以上设备且iOS11系统才会使用）
  */
 
-- (instancetype) initWithVideoSize:(CGSize)videoSize sessionPreset:(NSString *)captureSessionPreset frameRate:(int)fps bitrate:(int)bps bufferTime:(int)bufferTime isUseUDP:(YfTransportStyle)transportStyle isDropFrame:(BOOL)isDropFrame YfOutPutImageOrientation:(YfOutPutImageOrientation)YfOutPutImageOrientation isOnlyAudioPushBuffer:(BOOL)isOnlyAudioPushBuffer audioRecoderError:(audioRecoderError)audioRecoderError isOpenAdaptBitrate:(BOOL)isOpenAdapta;
+- (instancetype) initWithVideoSize:(CGSize)videoSize sessionPreset:(NSString *)captureSessionPreset frameRate:(int)fps bitrate:(int)bps bufferTime:(int)bufferTime isUseUDP:(YfTransportStyle)transportStyle isDropFrame:(BOOL)isDropFrame YfOutPutImageOrientation:(YfOutPutImageOrientation)YfOutPutImageOrientation isOnlyAudioPushBuffer:(BOOL)isOnlyAudioPushBuffer audioRecoderError:(audioRecoderError)audioRecoderError isOpenAdaptBitrate:(BOOL)isOpenAdapta enableHEVC:(BOOL)enableHEVC;
 
 
 @end
