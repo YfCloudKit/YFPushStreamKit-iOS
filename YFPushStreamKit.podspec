@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YFPushStreamKit"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "云帆推流器"
 
   s.description  = <<-DESC
